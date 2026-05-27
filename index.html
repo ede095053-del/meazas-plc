@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meazas P.L.C. | Quality Products, Services & Careers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- ===== TOPBAR ===== -->
+<div class="topbar">
+  <span><i class="fas fa-phone"></i> +251 911 234 567</span>
+  <span><i class="fas fa-envelope"></i> info@meazasplc.com</span>
+  <span><i class="fas fa-truck"></i> Free delivery over 5,000 Birr</span>
+  <span><i class="fas fa-clock"></i> Mon–Sat: 8AM–6PM</span>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <span class="logo-text">Meazas <span class="accent">P.L.C.</span></span>
+      <span class="logo-tagline">Quality You Can Trust</span>
+    </div>
+    <nav class="nav" id="mainNav">
+      <a href="#hero">Home</a>
+      <a href="#categories">Shop</a>
+      <a href="#services">Services</a>
+      <a href="#shops">Our Shops</a>
+      <a href="#about">About</a>
+      <a href="#vacancies">Careers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="icon-btn" aria-label="Wishlist"><i class="fas fa-heart"></i></button>
+      <button class="icon-btn cart-btn" aria-label="Cart"><i class="fas fa-shopping-cart"></i><span class="badge">0</span></button>
+      <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar">
+    <div class="container search-bar-inner">
+      <input type="text" placeholder="Search products, categories, brands..." id="searchInput" />
+      <button class="btn btn-primary btn-sm"><i class="fas fa-search"></i> Search</button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#hero" onclick="closeMobileNav()">Home</a>
+  <a href="#categories" onclick="closeMobileNav()">Shop</a>
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#shops" onclick="closeMobileNav()">Our Shops</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#vacancies" onclick="closeMobileNav()">Careers</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- ===== HERO SLIDER ===== -->
+<section class="hero" id="hero">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1400&q=80')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="hero-sub">Welcome to Meazas P.L.C.</p>
+        <h1>Ethiopia's Trusted<br/>Supply Partner</h1>
+        <p class="hero-desc">Premium packaging, industrial chemicals, and commercial vehicles — delivered across Ethiopia.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-primary"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+          <a href="#categories" class="btn btn-outline"><i class="fas fa-th-large"></i> Browse All</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1400&q=80')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="hero-sub">Industrial Chemicals</p>
+        <h1>Professional Grade<br/>Chemical Solutions</h1>
+        <p class="hero-desc">Certified industrial cleaners, disinfectants, and specialty chemicals for every sector.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-primary"><i class="fas fa-flask"></i> View Chemicals</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-phone"></i> Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1400&q=80')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="hero-sub">Commercial Vehicles</p>
+        <h1>Fleet Solutions<br/>for Your Business</h1>
+        <p class="hero-desc">Trucks, pickups, and delivery vans — sourced, financed, and delivered to your door.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-primary"><i class="fas fa-truck"></i> View Vehicles</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-phone"></i> Inquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="hero-arrow hero-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+  <button class="hero-arrow hero-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+  <div class="hero-dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats-bar">
+  <div class="container stats-grid">
+    <div class="stat-item"><strong>2,400+</strong><span>Products</span></div>
+    <div class="stat-item"><strong>850+</strong><span>Happy Clients</span></div>
+    <div class="stat-item"><strong>12+</strong><span>Years Experience</span></div>
+    <div class="stat-item"><strong>6</strong><span>Branch Shops</span></div>
+    <div class="stat-item"><strong>50+</strong><span>Team Members</span></div>
+  </div>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<section class="features">
+  <div class="container features-grid">
+    <div class="feature-card">
+      <i class="fas fa-medal"></i>
+      <h3>Certified Quality</h3>
+      <p>All products meet Ethiopian Standards Agency requirements.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Secure Payments</h3>
+      <p>Bank transfer, mobile money, and cash on delivery accepted.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-truck-fast"></i>
+      <h3>Fast Delivery</h3>
+      <p>Same-day in Addis Ababa. Nationwide in 3–5 days.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-headset"></i>
+      <h3>24/7 Support</h3>
+      <p>Dedicated account managers for business clients.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <h2>Shop By Category</h2>
+      <p>Browse our full range of products and services</p>
+    </div>
+    <div class="categories-grid">
+      <div class="category-card" data-filter="cups" style="background-image:url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&q=80')">
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon"><i class="fas fa-coffee"></i></div>
+          <h4>Paper Cups</h4>
+          <span>48 Products</span>
+        </div>
+      </div>
+      <div class="category-card" data-filter="foil" style="background-image:url('https://images.unsplash.com/photo-1585664811087-47f65abbad64?w=500&q=80')">
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon"><i class="fas fa-box"></i></div>
+          <h4>Foil Containers</h4>
+          <span>36 Products</span>
+        </div>
+      </div>
+      <div class="category-card" data-filter="chemicals" style="background-image:url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80')">
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon"><i class="fas fa-flask"></i></div>
+          <h4>Chemicals</h4>
+          <span>62 Products</span>
+        </div>
+      </div>
+      <div class="category-card" data-filter="vehicles" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80')">
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon"><i class="fas fa-car"></i></div>
+          <h4>Vehicles</h4>
+          <span>24 Products</span>
+        </div>
+      </div>
+      <div class="category-card" data-filter="food" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80')">
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon"><i class="fas fa-utensils"></i></div>
+          <h4>Food Packaging</h4>
+          <span>55 Products</span>
+        </div>
+      </div>
+      <div class="category-card" data-filter="industrial" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80')">
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <div class="cat-icon"><i class="fas fa-industry"></i></div>
+          <h4>Industrial</h4>
+          <span>80 Products</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEW ARRIVALS ===== -->
+<section class="section bg-light" id="products">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="productsTitle">New Arrivals</h2>
+      <p id="productsSubtitle">Freshly stocked products this month</p>
+    </div>
+
+    <!-- Product Filter Bar -->
+    <div class="product-filter-bar">
+      <button class="filter-btn active" onclick="filterProducts('all', this)">All Products</button>
+      <button class="filter-btn" onclick="filterProducts('cups', this)"><i class="fas fa-coffee"></i> Paper Cups</button>
+      <button class="filter-btn" onclick="filterProducts('foil', this)"><i class="fas fa-box"></i> Foil Containers</button>
+      <button class="filter-btn" onclick="filterProducts('chemicals', this)"><i class="fas fa-flask"></i> Chemicals</button>
+      <button class="filter-btn" onclick="filterProducts('vehicles', this)"><i class="fas fa-car"></i> Vehicles</button>
+      <button class="filter-btn" onclick="filterProducts('food', this)"><i class="fas fa-utensils"></i> Food Packaging</button>
+      <button class="filter-btn" onclick="filterProducts('industrial', this)"><i class="fas fa-industry"></i> Industrial</button>
+    </div>
+
+    <div id="noResults" class="no-results" style="display:none">
+      <i class="fas fa-box-open"></i>
+      <p>No products found in this category yet.</p>
+      <button class="btn btn-primary btn-sm" onclick="filterProducts('all', document.querySelector('.product-filter-bar .filter-btn'))">Show All</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+
+      <div class="product-card" data-category="cups">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&q=80" alt="Paper Cup 8oz" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Premium Paper Cup 8oz — Pack of 100</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(48)</span></div>
+          <div class="product-price-row"><p class="product-price">380 <span>Birr</span></p><p class="product-old-price">450 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="foil">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1585664811087-47f65abbad64?w=400&q=80" alt="Foil Container" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Aluminum Foil Container 750ml — Pack of 50</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(31)</span></div>
+          <div class="product-price-row"><p class="product-price">520 <span>Birr</span></p><p class="product-old-price">600 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="chemicals">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80" alt="Industrial Cleaner" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Multi-Surface Industrial Cleaner 5L</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(62)</span></div>
+          <div class="product-price-row"><p class="product-price">750 <span>Birr</span></p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="chemicals">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Hand Soap" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Antibacterial Hand Soap Dispenser 1L</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(19)</span></div>
+          <div class="product-price-row"><p class="product-price">210 <span>Birr</span></p><p class="product-old-price">260 Birr</p></div>
+          <p class="product-stock low-stock"><i class="fas fa-circle"></i> Low Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="food">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Food Box" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Kraft Paper Food Box 600ml — Pack of 25</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(24)</span></div>
+          <div class="product-price-row"><p class="product-price">340 <span>Birr</span></p><p class="product-old-price">400 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vehicles">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Delivery Van" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Isuzu NLR Delivery Van 2024</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(11)</span></div>
+          <div class="product-price-row"><p class="product-price">1,450,000 <span>Birr</span></p></div>
+          <p class="product-stock low-stock"><i class="fas fa-circle"></i> 3 Left</p>
+          <button class="btn btn-primary btn-sm">Inquire Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="industrial">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80" alt="Degreaser" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Heavy-Duty Degreaser Spray 500ml</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(41)</span></div>
+          <div class="product-price-row"><p class="product-price">185 <span>Birr</span></p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="food">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1542601906897-ecd3f7d5e0e3?w=400&q=80" alt="Eco Straws" />
+          <span class="product-badge">New</span>
+        </div>
+        <div class="product-info">
+          <h4>Eco Biodegradable Straw — Pack of 500</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(55)</span></div>
+          <div class="product-price-row"><p class="product-price">160 <span>Birr</span></p><p class="product-old-price">200 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== BEST SELLERS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Best Selling Products</h2>
+      <p>Our most popular items this month</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card" data-category="cups">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&q=80" alt="Paper Cup 12oz" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Double-Wall Paper Cup 12oz — Pack of 100</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(134)</span></div>
+          <div class="product-price-row"><p class="product-price">580 <span>Birr</span></p><p class="product-old-price">680 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="foil">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1585664811087-47f65abbad64?w=400&q=80" alt="Foil Tray" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Rectangular Foil Tray 1000ml — Pack of 25</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(98)</span></div>
+          <div class="product-price-row"><p class="product-price">420 <span>Birr</span></p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="chemicals">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&q=80" alt="Floor Disinfectant" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Floor Disinfectant Concentrate 5L</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(211)</span></div>
+          <div class="product-price-row"><p class="product-price">890 <span>Birr</span></p><p class="product-old-price">1,050 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vehicles">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=400&q=80" alt="Cargo Truck" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Isuzu NPR Cargo Truck 2022</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(17)</span></div>
+          <div class="product-price-row"><p class="product-price">1,850,000 <span>Birr</span></p></div>
+          <p class="product-stock low-stock"><i class="fas fa-circle"></i> 2 Left</p>
+          <button class="btn btn-primary btn-sm">Inquire Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="food">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1542601906897-ecd3f7d5e0e3?w=400&q=80" alt="Takeaway Box" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Compostable Takeaway Box — Pack of 50</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(89)</span></div>
+          <div class="product-price-row"><p class="product-price">470 <span>Birr</span></p><p class="product-old-price">550 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="chemicals">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80" alt="Bleach" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Chlorine Bleach Solution 10L</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>(143)</span></div>
+          <div class="product-price-row"><p class="product-price">640 <span>Birr</span></p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="vehicles">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Toyota Hilux" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Toyota Hilux Pickup 4WD 2023</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>(29)</span></div>
+          <div class="product-price-row"><p class="product-price">2,400,000 <span>Birr</span></p></div>
+          <p class="product-stock low-stock"><i class="fas fa-circle"></i> 1 Left</p>
+          <button class="btn btn-primary btn-sm">Inquire Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="industrial">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Hand Wash" />
+          <span class="product-badge hot-badge">🔥 Best Seller</span>
+        </div>
+        <div class="product-info">
+          <h4>Industrial Hand Wash Liquid 20L</h4>
+          <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>(76)</span></div>
+          <div class="product-price-row"><p class="product-price">1,100 <span>Birr</span></p><p class="product-old-price">1,300 Birr</p></div>
+          <p class="product-stock in-stock"><i class="fas fa-circle"></i> In Stock</p>
+          <button class="btn btn-primary btn-sm add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMO BANNER ===== -->
+<section class="promo-banner">
+  <div class="container promo-grid">
+    <div class="promo-card" style="background-image:url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&q=80')">
+      <div class="promo-overlay"></div>
+      <div class="promo-content">
+        <span class="promo-tag">Limited Offer</span>
+        <h3>20% Off All Chemicals</h3>
+        <p>This week only — bulk orders get extra discount</p>
+        <a href="#products" class="btn btn-primary btn-sm">Shop Now</a>
+      </div>
+    </div>
+    <div class="promo-card" style="background-image:url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=700&q=80')">
+      <div class="promo-overlay"></div>
+      <div class="promo-content">
+        <span class="promo-tag">Fleet Deal</span>
+        <h3>Buy 3 Vehicles, Save 5%</h3>
+        <p>Special pricing for fleet purchases above 3 units</p>
+        <a href="#contact" class="btn btn-primary btn-sm">Get Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section bg-light" id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Beyond products — we offer end-to-end business solutions</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&q=80" alt="Bulk Supply" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-boxes"></i></div>
+          <h3>Bulk Supply & Wholesale</h3>
+          <p>Custom bulk orders for hotels, restaurants, hospitals, and factories. Volume discounts available with dedicated account management.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Minimum order from 50 units</li>
+            <li><i class="fas fa-check"></i> Custom branding available</li>
+            <li><i class="fas fa-check"></i> Monthly supply contracts</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&q=80" alt="Vehicle Leasing" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-car-side"></i></div>
+          <h3>Vehicle Leasing & Financing</h3>
+          <p>Flexible lease and financing options for commercial vehicles. Work with our finance partners to get your fleet on the road fast.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 12–60 month lease terms</li>
+            <li><i class="fas fa-check"></i> Low down payment options</li>
+            <li><i class="fas fa-check"></i> Fleet management support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&q=80" alt="Chemical Consulting" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-flask"></i></div>
+          <h3>Chemical Consulting</h3>
+          <p>Our certified chemists help you select the right products for your industry — from food processing to industrial cleaning.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> On-site assessment</li>
+            <li><i class="fas fa-check"></i> Safety data sheets provided</li>
+            <li><i class="fas fa-check"></i> Staff training included</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm">Book Consultation</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500&q=80" alt="Packaging Design" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>Custom Packaging Design</h3>
+          <p>Brand your packaging with your logo and colors. We handle design, printing, and production for cups, boxes, and containers.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Full-color printing</li>
+            <li><i class="fas fa-check"></i> Food-safe inks</li>
+            <li><i class="fas fa-check"></i> 7-day turnaround</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=500&q=80" alt="Logistics" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-truck-moving"></i></div>
+          <h3>Nationwide Logistics</h3>
+          <p>We deliver to all major cities in Ethiopia. Our fleet of refrigerated and dry cargo trucks ensures your goods arrive safely.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Real-time tracking</li>
+            <li><i class="fas fa-check"></i> Same-day Addis Ababa</li>
+            <li><i class="fas fa-check"></i> Insurance included</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm">Track Order</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" alt="B2B Portal" />
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fas fa-laptop"></i></div>
+          <h3>B2B Online Portal</h3>
+          <p>Business clients get access to our dedicated B2B portal — manage orders, invoices, and delivery schedules in one place.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Dedicated account dashboard</li>
+            <li><i class="fas fa-check"></i> Automated reorder alerts</li>
+            <li><i class="fas fa-check"></i> Net-30 payment terms</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm">Register Business</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR SHOPS ===== -->
+<section class="section" id="shops">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Shops</h2>
+      <p>Visit us at any of our 6 locations across Ethiopia</p>
+    </div>
+    <div class="shops-grid">
+
+      <div class="shop-card">
+        <div class="shop-img">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&q=80" alt="Bole Branch" />
+          <span class="shop-badge main">Main Branch</span>
+        </div>
+        <div class="shop-info">
+          <h3>Bole Road — Head Office</h3>
+          <p class="shop-address"><i class="fas fa-map-marker-alt"></i> Bole Road, Near Edna Mall, Addis Ababa</p>
+          <p class="shop-hours"><i class="fas fa-clock"></i> Mon–Sat: 8AM–7PM | Sun: 10AM–4PM</p>
+          <p class="shop-phone"><i class="fas fa-phone"></i> +251 911 234 567</p>
+          <div class="shop-tags"><span>All Products</span><span>Showroom</span><span>B2B Desk</span></div>
+          <a href="#contact" class="btn btn-outline-dark btn-sm">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div class="shop-img">
+          <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=500&q=80" alt="Merkato Branch" />
+        </div>
+        <div class="shop-info">
+          <h3>Merkato Branch</h3>
+          <p class="shop-address"><i class="fas fa-map-marker-alt"></i> Merkato, Addis Ketema, Addis Ababa</p>
+          <p class="shop-hours"><i class="fas fa-clock"></i> Mon–Sat: 7AM–8PM</p>
+          <p class="shop-phone"><i class="fas fa-phone"></i> +251 911 345 678</p>
+          <div class="shop-tags"><span>Chemicals</span><span>Packaging</span><span>Wholesale</span></div>
+          <a href="#contact" class="btn btn-outline-dark btn-sm">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div class="shop-img">
+          <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=500&q=80" alt="Piassa Branch" />
+        </div>
+        <div class="shop-info">
+          <h3>Piassa Branch</h3>
+          <p class="shop-address"><i class="fas fa-map-marker-alt"></i> Piassa, Arada Sub-City, Addis Ababa</p>
+          <p class="shop-hours"><i class="fas fa-clock"></i> Mon–Sat: 8AM–6PM</p>
+          <p class="shop-phone"><i class="fas fa-phone"></i> +251 911 456 789</p>
+          <div class="shop-tags"><span>Paper Cups</span><span>Foil</span><span>Retail</span></div>
+          <a href="#contact" class="btn btn-outline-dark btn-sm">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div class="shop-img">
+          <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=500&q=80" alt="Hawassa Branch" />
+        </div>
+        <div class="shop-info">
+          <h3>Hawassa Branch</h3>
+          <p class="shop-address"><i class="fas fa-map-marker-alt"></i> Tabor Area, Hawassa, SNNPR</p>
+          <p class="shop-hours"><i class="fas fa-clock"></i> Mon–Sat: 8AM–6PM</p>
+          <p class="shop-phone"><i class="fas fa-phone"></i> +251 912 567 890</p>
+          <div class="shop-tags"><span>All Products</span><span>Delivery</span></div>
+          <a href="#contact" class="btn btn-outline-dark btn-sm">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div class="shop-img">
+          <img src="https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=500&q=80" alt="Bahir Dar Branch" />
+        </div>
+        <div class="shop-info">
+          <h3>Bahir Dar Branch</h3>
+          <p class="shop-address"><i class="fas fa-map-marker-alt"></i> Tana Sub-City, Bahir Dar, Amhara</p>
+          <p class="shop-hours"><i class="fas fa-clock"></i> Mon–Sat: 8AM–6PM</p>
+          <p class="shop-phone"><i class="fas fa-phone"></i> +251 913 678 901</p>
+          <div class="shop-tags"><span>Chemicals</span><span>Vehicles</span></div>
+          <a href="#contact" class="btn btn-outline-dark btn-sm">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="shop-card">
+        <div class="shop-img">
+          <img src="https://images.unsplash.com/photo-1582037928769-181f2644ecb7?w=500&q=80" alt="Dire Dawa Branch" />
+        </div>
+        <div class="shop-info">
+          <h3>Dire Dawa Branch</h3>
+          <p class="shop-address"><i class="fas fa-map-marker-alt"></i> Sabian Area, Dire Dawa</p>
+          <p class="shop-hours"><i class="fas fa-clock"></i> Mon–Sat: 8AM–6PM</p>
+          <p class="shop-phone"><i class="fas fa-phone"></i> +251 914 789 012</p>
+          <div class="shop-tags"><span>Packaging</span><span>Industrial</span></div>
+          <a href="#contact" class="btn btn-outline-dark btn-sm">Get Directions</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section bg-light" id="about">
+  <div class="container about-grid">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80" alt="About Meazas PLC" />
+      <div class="about-badge">
+        <strong>12+</strong>
+        <span>Years of Excellence</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="section-sub">Who We Are</p>
+      <h2>Ethiopia's Leading Supply Company</h2>
+      <p>Founded in 2012, Meazas P.L.C. has grown from a small packaging supplier in Addis Ababa into one of Ethiopia's most trusted multi-sector supply companies. We serve over 850 businesses across hospitality, healthcare, manufacturing, and logistics.</p>
+      <p>Our mission is simple: deliver quality products on time, every time — backed by expert service and fair pricing.</p>
+      <div class="about-values">
+        <div class="about-value">
+          <i class="fas fa-award"></i>
+          <div>
+            <h4>Quality First</h4>
+            <p>Every product is tested and certified before it reaches you.</p>
+          </div>
+        </div>
+        <div class="about-value">
+          <i class="fas fa-handshake"></i>
+          <div>
+            <h4>Trusted Partnerships</h4>
+            <p>Long-term relationships built on transparency and reliability.</p>
+          </div>
+        </div>
+        <div class="about-value">
+          <i class="fas fa-leaf"></i>
+          <div>
+            <h4>Sustainability</h4>
+            <p>Committed to eco-friendly packaging and responsible sourcing.</p>
+          </div>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2>What Our Clients Say</h2>
+      <p>Trusted by businesses across Ethiopia</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Meazas has been our packaging supplier for 4 years. Consistent quality, fast delivery, and great prices. Highly recommended for any food business."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="Abebe Girma" />
+          <div>
+            <strong>Abebe Girma</strong>
+            <span>Owner, Addis Café & Bakery</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"We sourced 5 delivery vans through Meazas. The financing was smooth and the vehicles were delivered on time. Our logistics operation has never been better."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Tigist Haile" />
+          <div>
+            <strong>Tigist Haile</strong>
+            <span>CEO, Haile Logistics PLC</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <p>"Their chemical consulting team helped us switch to safer, more effective cleaning products. The staff training was thorough and professional."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Dawit Bekele" />
+          <div>
+            <strong>Dawit Bekele</strong>
+            <span>Facilities Manager, Sheraton Addis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VACANCIES ===== -->
+<section class="section bg-light" id="vacancies">
+  <div class="container">
+    <div class="section-header">
+      <h2>Open Positions</h2>
+      <p>Join our growing team of 50+ professionals across Ethiopia</p>
+    </div>
+    <div class="vacancies-filter">
+      <button class="filter-btn active" onclick="filterJobs('all', this)">All Departments</button>
+      <button class="filter-btn" onclick="filterJobs('sales', this)">Sales</button>
+      <button class="filter-btn" onclick="filterJobs('logistics', this)">Logistics</button>
+      <button class="filter-btn" onclick="filterJobs('tech', this)">Technology</button>
+      <button class="filter-btn" onclick="filterJobs('operations', this)">Operations</button>
+    </div>
+    <div class="vacancies-grid" id="vacanciesGrid">
+
+      <div class="vacancy-card" data-dept="sales">
+        <div class="vacancy-header">
+          <div class="vacancy-icon"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <h3>Senior Sales Executive</h3>
+            <span class="vacancy-dept sales-dept">Sales</span>
+          </div>
+          <span class="vacancy-type full-time">Full-Time</span>
+        </div>
+        <p>Drive B2B sales for our packaging and chemical product lines. Manage key accounts and develop new business across Addis Ababa.</p>
+        <div class="vacancy-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Addis Ababa</span>
+          <span><i class="fas fa-money-bill-wave"></i> 18,000–25,000 Birr/mo</span>
+          <span><i class="fas fa-graduation-cap"></i> Bachelor's Degree</span>
+        </div>
+        <div class="vacancy-footer">
+          <span class="vacancy-deadline"><i class="fas fa-calendar"></i> Deadline: June 30, 2026</span>
+          <button class="btn btn-primary btn-sm" onclick="openApplyModal('Senior Sales Executive')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="vacancy-card" data-dept="logistics">
+        <div class="vacancy-header">
+          <div class="vacancy-icon"><i class="fas fa-truck"></i></div>
+          <div>
+            <h3>Logistics Coordinator</h3>
+            <span class="vacancy-dept logistics-dept">Logistics</span>
+          </div>
+          <span class="vacancy-type full-time">Full-Time</span>
+        </div>
+        <p>Coordinate nationwide deliveries, manage driver schedules, and optimize routes for our growing logistics network.</p>
+        <div class="vacancy-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Addis Ababa</span>
+          <span><i class="fas fa-money-bill-wave"></i> 14,000–18,000 Birr/mo</span>
+          <span><i class="fas fa-graduation-cap"></i> Diploma or Degree</span>
+        </div>
+        <div class="vacancy-footer">
+          <span class="vacancy-deadline"><i class="fas fa-calendar"></i> Deadline: July 15, 2026</span>
+          <button class="btn btn-primary btn-sm" onclick="openApplyModal('Logistics Coordinator')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="vacancy-card" data-dept="tech">
+        <div class="vacancy-header">
+          <div class="vacancy-icon"><i class="fas fa-code"></i></div>
+          <div>
+            <h3>Full-Stack Web Developer</h3>
+            <span class="vacancy-dept tech-dept">Technology</span>
+          </div>
+          <span class="vacancy-type full-time">Full-Time</span>
+        </div>
+        <p>Build and maintain our e-commerce platform and B2B portal. Work with React, Node.js, and PostgreSQL in a fast-paced environment.</p>
+        <div class="vacancy-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Addis Ababa / Remote</span>
+          <span><i class="fas fa-money-bill-wave"></i> 25,000–40,000 Birr/mo</span>
+          <span><i class="fas fa-graduation-cap"></i> CS Degree or Equivalent</span>
+        </div>
+        <div class="vacancy-footer">
+          <span class="vacancy-deadline"><i class="fas fa-calendar"></i> Deadline: June 20, 2026</span>
+          <button class="btn btn-primary btn-sm" onclick="openApplyModal('Full-Stack Web Developer')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="vacancy-card" data-dept="operations">
+        <div class="vacancy-header">
+          <div class="vacancy-icon"><i class="fas fa-warehouse"></i></div>
+          <div>
+            <h3>Warehouse Supervisor</h3>
+            <span class="vacancy-dept ops-dept">Operations</span>
+          </div>
+          <span class="vacancy-type full-time">Full-Time</span>
+        </div>
+        <p>Oversee daily warehouse operations, inventory management, and a team of 10 warehouse staff at our Bole Road facility.</p>
+        <div class="vacancy-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Addis Ababa</span>
+          <span><i class="fas fa-money-bill-wave"></i> 16,000–20,000 Birr/mo</span>
+          <span><i class="fas fa-graduation-cap"></i> Diploma or Degree</span>
+        </div>
+        <div class="vacancy-footer">
+          <span class="vacancy-deadline"><i class="fas fa-calendar"></i> Deadline: July 1, 2026</span>
+          <button class="btn btn-primary btn-sm" onclick="openApplyModal('Warehouse Supervisor')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="vacancy-card" data-dept="sales">
+        <div class="vacancy-header">
+          <div class="vacancy-icon"><i class="fas fa-store"></i></div>
+          <div>
+            <h3>Branch Shop Manager</h3>
+            <span class="vacancy-dept sales-dept">Sales</span>
+          </div>
+          <span class="vacancy-type full-time">Full-Time</span>
+        </div>
+        <p>Manage day-to-day operations of our Hawassa or Bahir Dar branch. Lead a team of 5, handle inventory, and grow local sales.</p>
+        <div class="vacancy-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Hawassa / Bahir Dar</span>
+          <span><i class="fas fa-money-bill-wave"></i> 15,000–20,000 Birr/mo</span>
+          <span><i class="fas fa-graduation-cap"></i> Bachelor's Degree</span>
+        </div>
+        <div class="vacancy-footer">
+          <span class="vacancy-deadline"><i class="fas fa-calendar"></i> Deadline: July 10, 2026</span>
+          <button class="btn btn-primary btn-sm" onclick="openApplyModal('Branch Shop Manager')">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="vacancy-card" data-dept="tech">
+        <div class="vacancy-header">
+          <div class="vacancy-icon"><i class="fas fa-chart-bar"></i></div>
+          <div>
+            <h3>Data Analyst</h3>
+            <span class="vacancy-dept tech-dept">Technology</span>
+          </div>
+          <span class="vacancy-type part-time">Part-Time</span>
+        </div>
+        <p>Analyze sales data, inventory trends, and customer behavior to help leadership make data-driven decisions.</p>
+        <div class="vacancy-meta">
+          <span><i class="fas fa-map-marker-alt"></i> Remote / Addis Ababa</span>
+          <span><i class="fas fa-money-bill-wave"></i> 12,000–18,000 Birr/mo</span>
+          <span><i class="fas fa-graduation-cap"></i> Statistics or CS Degree</span>
+        </div>
+        <div class="vacancy-footer">
+          <span class="vacancy-deadline"><i class="fas fa-calendar"></i> Deadline: June 25, 2026</span>
+          <button class="btn btn-primary btn-sm" onclick="openApplyModal('Data Analyst')">Apply Now</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Apply Modal -->
+<div class="modal-overlay" id="applyModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeApplyModal()"><i class="fas fa-times"></i></button>
+    <h2>Apply for <span id="modalJobTitle"></span></h2>
+    <p>Fill in your details and we'll get back to you within 2 business days.</p>
+    <form class="apply-form" onsubmit="submitApplication(event)">
+      <div class="form-row">
+        <input type="text" placeholder="Full Name *" required />
+        <input type="email" placeholder="Email Address *" required />
+      </div>
+      <div class="form-row">
+        <input type="tel" placeholder="Phone Number *" required />
+        <input type="text" placeholder="Current Job Title" />
+      </div>
+      <textarea placeholder="Why do you want to join Meazas P.L.C.? (Cover letter)" rows="4"></textarea>
+      <div class="form-upload">
+        <label><i class="fas fa-paperclip"></i> Attach CV (PDF, max 5MB)</label>
+        <input type="file" accept=".pdf,.doc,.docx" />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section class="section bg-light" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you — reach out any time</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><h4>Head Office</h4><p>Bole Road, Near Edna Mall, Addis Ababa</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div><h4>Phone</h4><p>+251 911 234 567 | +251 911 234 568</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div><h4>Email</h4><p>info@meazasplc.com | sales@meazasplc.com</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-clock"></i></div>
+          <div><h4>Working Hours</h4><p>Mon–Sat: 8AM–6PM | Sun: Closed</p></div>
+        </div>
+        <div class="social-links" style="margin-top:16px">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="submitContact(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name *" required />
+          <input type="email" placeholder="Email Address *" required />
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Phone Number" />
+          <select>
+            <option value="">Subject</option>
+            <option>Product Inquiry</option>
+            <option>Bulk Order</option>
+            <option>Vehicle Inquiry</option>
+            <option>Career</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <textarea placeholder="Your message..." rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3 class="logo-text">Meazas <span class="accent">P.L.C.</span></h3>
+      <p>Ethiopia's trusted supplier of packaging, chemicals, and commercial vehicles since 2012.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#categories">Shop</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#shops">Our Shops</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#vacancies">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">Paper Cups</a></li>
+        <li><a href="#">Foil Containers</a></li>
+        <li><a href="#">Chemicals</a></li>
+        <li><a href="#">Vehicles</a></li>
+        <li><a href="#">Food Packaging</a></li>
+        <li><a href="#">Industrial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-phone"></i> +251 911 234 567</li>
+        <li><i class="fas fa-envelope"></i> info@meazasplc.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Bole Road, Addis Ababa</li>
+        <li><i class="fas fa-clock"></i> Mon–Sat: 8AM–6PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Meazas P.L.C. All rights reserved. | Addis Ababa, Ethiopia</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
