@@ -999,3 +999,118 @@ img { -webkit-user-drag: none; }
 @media (max-width: 380px) {
   .support-cards { grid-template-columns: 1fr; }
 }
+
+/* ===================================================
+   MOBILE TYPOGRAPHY — fluid & readable on all screens
+   =================================================== */
+
+/* Base font size scales with viewport */
+html { font-size: 16px; }
+
+/* Fluid headings using clamp(min, preferred, max) */
+.hero h1        { font-size: clamp(22px, 5.5vw, 46px); }
+.section-header h2 { font-size: clamp(20px, 4.5vw, 32px); }
+.about-content h2  { font-size: clamp(20px, 4.5vw, 32px); }
+.service-body h3   { font-size: clamp(15px, 2.5vw, 17px); }
+.shop-info h3      { font-size: clamp(15px, 2.5vw, 17px); }
+.blog-body h3      { font-size: clamp(14px, 2.2vw, 16px); }
+.vacancy-header h3 { font-size: clamp(14px, 2.2vw, 16px); }
+.promo-content h3  { font-size: clamp(16px, 3.5vw, 24px); }
+.faq-question span { font-size: clamp(13px, 2vw, 15px); }
+.support-card h3   { font-size: clamp(14px, 2.2vw, 16px); }
+
+/* Body text — comfortable reading on small screens */
+body { font-size: clamp(14px, 2vw, 16px); line-height: 1.7; }
+
+/* Section subtitle */
+.section-header p  { font-size: clamp(13px, 1.8vw, 15px); }
+
+/* Product card */
+.product-info h4   { font-size: clamp(12px, 1.8vw, 14px); line-height: 1.5; }
+.product-price     { font-size: clamp(15px, 2.5vw, 18px); }
+.product-old-price { font-size: clamp(11px, 1.5vw, 12px); }
+.product-stock     { font-size: clamp(11px, 1.5vw, 11.5px); }
+.product-rating    { font-size: clamp(11px, 1.5vw, 12px); }
+
+/* Feature cards */
+.feature-card h3 { font-size: clamp(13px, 1.8vw, 14px); }
+.feature-card p  { font-size: clamp(11.5px, 1.6vw, 12.5px); }
+
+/* Service */
+.service-body p        { font-size: clamp(13px, 1.8vw, 13.5px); }
+.service-features li   { font-size: clamp(12px, 1.7vw, 13px); }
+
+/* Shop */
+.shop-address, .shop-hours, .shop-phone { font-size: clamp(12px, 1.7vw, 13px); }
+
+/* About */
+.about-content p { font-size: clamp(13.5px, 1.9vw, 14.5px); }
+.about-value h4  { font-size: clamp(13px, 1.8vw, 15px); }
+.about-value p   { font-size: clamp(12px, 1.6vw, 13px); }
+
+/* Testimonials */
+.testimonial-card p    { font-size: clamp(13px, 1.8vw, 14px); }
+.testimonial-author strong { font-size: clamp(13px, 1.8vw, 14px); }
+.testimonial-author span   { font-size: clamp(11px, 1.5vw, 12px); }
+
+/* Vacancy */
+.vacancy-card > p  { font-size: clamp(12.5px, 1.7vw, 13.5px); }
+.vacancy-meta span { font-size: clamp(11px, 1.5vw, 12px); }
+.vacancy-deadline  { font-size: clamp(11px, 1.5vw, 12px); }
+
+/* Blog */
+.blog-body p    { font-size: clamp(12.5px, 1.7vw, 13.5px); }
+.blog-meta span { font-size: clamp(10.5px, 1.4vw, 11.5px); }
+.blog-link      { font-size: clamp(12px, 1.6vw, 13px); }
+
+/* Support */
+.support-card p { font-size: clamp(12px, 1.6vw, 13px); }
+
+/* FAQ */
+.faq-answer p { font-size: clamp(13px, 1.8vw, 14px); }
+
+/* Footer */
+.footer-col p      { font-size: clamp(12.5px, 1.7vw, 13.5px); }
+.footer-col ul li  { font-size: clamp(12.5px, 1.7vw, 13.5px); }
+.footer-bottom     { font-size: clamp(11px, 1.4vw, 12.5px); }
+
+/* Nav */
+.nav a       { font-size: clamp(13px, 1.5vw, 14px); }
+.mobile-nav a { font-size: clamp(15px, 2.5vw, 16px); }
+
+/* Buttons */
+.btn    { font-size: clamp(13px, 1.8vw, 14.5px); }
+.btn-sm { font-size: clamp(12px, 1.6vw, 13px); }
+
+/* Hero sub-label */
+.hero-sub  { font-size: clamp(11px, 1.5vw, 13px); }
+.hero-desc { font-size: clamp(13px, 1.8vw, 16px); }
+
+/* Stats bar */
+.stat-item strong { font-size: clamp(18px, 3.5vw, 24px); }
+.stat-item span   { font-size: clamp(10px, 1.4vw, 12px); }
+
+/* Logo */
+.logo-text { font-size: clamp(17px, 3vw, 22px); }
+
+/* Chat widget */
+.chat-msg p        { font-size: clamp(12.5px, 1.7vw, 13.5px); }
+.chat-input-row input { font-size: clamp(13px, 1.8vw, 13px); }
+
+/* Toast */
+.toast { font-size: clamp(13px, 1.8vw, 14px) !important; }
+
+/* ===== EXTRA SMALL SCREENS (< 400px) ===== */
+@media (max-width: 400px) {
+  .hero h1 { font-size: 20px; }
+  .section-header h2 { font-size: 18px; }
+  .product-info h4 { font-size: 11.5px; }
+  .product-price { font-size: 14px; }
+  .btn { font-size: 12.5px; padding: 10px 18px; }
+  .btn-sm { font-size: 11.5px; padding: 7px 14px; }
+  .logo-text { font-size: 16px; }
+  .mobile-nav a { font-size: 14px; }
+  .faq-question span { font-size: 12.5px; }
+  .vacancy-header h3 { font-size: 13.5px; }
+  .promo-content h3 { font-size: 15px; }
+}
