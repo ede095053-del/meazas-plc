@@ -57,14 +57,18 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
 document.querySelectorAll('.category-card[data-filter]').forEach(card => {
   card.addEventListener('click', () => {
     const filter = card.dataset.filter;
-    // scroll to products section
     const section = document.getElementById('products');
     const top = section.getBoundingClientRect().top + window.scrollY - 80;
     window.scrollTo({ top, behavior: 'smooth' });
-    // activate the matching filter button
     setTimeout(() => {
-      const btn = document.querySelector(`.product-filter-bar .filter-btn[onclick*="'${filter}'"]`);
-      if (btn) filterProducts(filter, btn);
+      // find matching filter button by its data or onclick text
+      const btns = document.querySelectorAll('.product-filter-bar .filter-btn');
+      let matched = null;
+      btns.forEach(b => {
+        const oc = b.getAttribute('onclick') || '';
+        if (oc.includes(`'${filter}'`)) matched = b;
+      });
+      if (matched) filterProducts(filter, matched);
     }, 400);
   });
 });
@@ -217,11 +221,11 @@ document.querySelectorAll('.product-card').forEach(el => {
 });
 
 // ===== ANIMATED STAT COUNTERS =====
-function animateCounter(el, target, duration = 1800) {
+function animateCounter(el, target) {
   let start = 0;
-  const isPlus = target.toString().includes('+');
   const num = parseInt(target.toString().replace(/[^0-9]/g, ''));
   const suffix = target.toString().replace(/[0-9]/g, '');
+  const duration = 1800;
   const step = num / (duration / 16);
   const timer = setInterval(() => {
     start += step;
@@ -243,37 +247,41 @@ const counterObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.stat-item').forEach(el => counterObserver.observe(el));
 
 // ===== LIVE SEARCH =====
-document.getElementById('searchInput').addEventListener('input', function () {
-  const q = this.value.trim().toLowerCase();
-  if (!q) {
-    // restore all
-    document.querySelectorAll('.product-card[data-category]').forEach(c => {
-      c.style.display = '';
-      c.classList.add('revealed');
-    });
-    document.getElementById('noResults').style.display = 'none';
-    return;
-  }
-  // scroll to products
-  const section = document.getElementById('products');
-  const top = section.getBoundingClientRect().top + window.scrollY - 80;
-  window.scrollTo({ top, behavior: 'smooth' });
-
-  let visible = 0;
-  document.querySelectorAll('.product-card[data-category]').forEach(card => {
-    const text = card.querySelector('h4').textContent.toLowerCase();
-    if (text.includes(q)) {
-      card.style.display = '';
-      card.classList.add('revealed');
-      visible++;
-    } else {
-      card.style.display = 'none';
+const searchInputEl = document.getElementById('searchInput');
+if (searchInputEl) {
+  searchInputEl.addEventListener('input', function () {
+    const q = this.value.trim().toLowerCase();
+    if (!q) {
+      document.querySelectorAll('.product-card[data-category]').forEach(c => {
+        c.style.display = '';
+        c.classList.add('revealed');
+      });
+      const noRes = document.getElementById('noResults');
+      if (noRes) noRes.style.display = 'none';
+      return;
     }
+    const section = document.getElementById('products');
+    if (section) {
+      const top = section.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+    let visible = 0;
+    document.querySelectorAll('.product-card[data-category]').forEach(card => {
+      const h4 = card.querySelector('h4');
+      const text = h4 ? h4.textContent.toLowerCase() : '';
+      if (text.includes(q)) {
+        card.style.display = '';
+        card.classList.add('revealed');
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    const noRes = document.getElementById('noResults');
+    if (noRes) noRes.style.display = visible === 0 ? 'flex' : 'none';
+    document.querySelectorAll('.product-filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
   });
-  document.getElementById('noResults').style.display = visible === 0 ? 'flex' : 'none';
-  // reset filter bar
-  document.querySelectorAll('.product-filter-bar .filter-btn').forEach(b => b.classList.remove('active'));
-});
+}
 
 // ===== WISHLIST =====
 let wishlist = JSON.parse(localStorage.getItem('meazas_wishlist') || '[]');
@@ -583,10 +591,10 @@ function sendChatMsg() {
   addChatMsg(text, 'user');
   document.querySelector('.chat-quick-replies')?.remove();
   setTimeout(() => {
-    const key = text.toLowerCase();
+    const lower = text.toLowerCase();
     let reply = chatReplies['default'];
     for (const k of Object.keys(chatReplies)) {
-      if (text.toLowerCase().includes(k)) { reply = chatReplies[k]; break; }
+      if (k !== 'default' && lower.includes(k)) { reply = chatReplies[k]; break; }
     }
     addChatMsg(reply, 'agent');
   }, 900);
