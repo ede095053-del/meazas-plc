@@ -443,3 +443,160 @@ function showQuickView(title, price, img, rating, stock) {
   document.body.appendChild(modal);
   document.body.style.overflow = 'hidden';
 }
+
+// ===== BLOG POSTS DATA =====
+const blogPosts = [
+  {
+    title: 'How to Choose the Right Industrial Cleaner for Your Business',
+    cat: 'Chemicals', date: 'May 12, 2026', read: '5 min read',
+    img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80',
+    content: `<p>Choosing the right industrial cleaner is critical for safety, efficiency, and compliance. Here's what to consider:</p>
+    <h4>1. pH Level</h4><p>Acidic cleaners (pH below 7) are best for mineral deposits and rust. Alkaline cleaners (pH above 7) tackle grease and oils. Neutral cleaners work for general surfaces.</p>
+    <h4>2. Surface Compatibility</h4><p>Always check that the cleaner is safe for your specific surfaces — metal, concrete, food-contact surfaces, or electronics each require different formulations.</p>
+    <h4>3. Safety Certifications</h4><p>Look for EFDA certification and request the Safety Data Sheet (SDS) before purchasing. Meazas provides SDS for all chemical products.</p>
+    <h4>4. Concentration vs. Ready-to-Use</h4><p>Concentrated formulas are more cost-effective for large operations. Ready-to-use products are better for smaller, less frequent cleaning tasks.</p>
+    <p>Need help selecting the right product? Our chemical consultants offer free on-site assessments. <a href="#contact" style="color:var(--primary)">Contact us today.</a></p>`
+  },
+  {
+    title: 'Why Eco-Friendly Packaging is the Future for Ethiopian Businesses',
+    cat: 'Packaging', date: 'May 5, 2026', read: '4 min read',
+    img: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80',
+    content: `<p>The shift toward sustainable packaging is no longer optional — it's a competitive advantage. Here's why Ethiopian businesses are making the switch.</p>
+    <h4>Consumer Demand is Rising</h4><p>A 2025 survey found that 68% of Ethiopian urban consumers prefer businesses that use eco-friendly packaging. This number is growing every year.</p>
+    <h4>Regulatory Pressure</h4><p>Ethiopia's single-use plastic regulations are tightening. Businesses that switch now avoid future compliance costs and penalties.</p>
+    <h4>Cost Savings Over Time</h4><p>While eco-friendly packaging can cost 10–15% more upfront, bulk purchasing and reduced waste disposal costs often result in net savings within 12 months.</p>
+    <h4>Meazas Eco Range</h4><p>Our biodegradable straws, compostable takeaway boxes, and kraft paper food boxes are all certified food-safe and available in bulk. <a href="#products" style="color:var(--primary)">Browse our eco range.</a></p>`
+  },
+  {
+    title: '5 Tips for Managing a Commercial Vehicle Fleet in Ethiopia',
+    cat: 'Vehicles', date: 'Apr 28, 2026', read: '6 min read',
+    img: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80',
+    content: `<p>Managing a commercial fleet in Ethiopia comes with unique challenges — from road conditions to fuel availability. These five tips will help you run a tighter, more profitable operation.</p>
+    <h4>1. Preventive Maintenance Schedules</h4><p>Service every vehicle every 5,000km or 3 months, whichever comes first. Keep a digital log for each vehicle.</p>
+    <h4>2. Driver Training Programs</h4><p>Trained drivers reduce accidents by up to 40% and improve fuel efficiency by 15%. Invest in quarterly training sessions.</p>
+    <h4>3. GPS Tracking</h4><p>Real-time tracking reduces unauthorized use, improves route efficiency, and helps with insurance claims.</p>
+    <h4>4. Fuel Management</h4><p>Use fuel cards and set daily limits per vehicle. Monitor consumption weekly to spot inefficiencies early.</p>
+    <h4>5. Fleet Insurance</h4><p>Comprehensive fleet insurance is non-negotiable. Meazas partners with leading insurers to offer competitive fleet insurance packages with our vehicle purchases.</p>`
+  },
+  {
+    title: 'Food Safety Standards for Packaging: What Every Restaurant Must Know',
+    cat: 'Food Packaging', date: 'Apr 18, 2026', read: '3 min read',
+    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
+    content: `<p>Food safety regulations in Ethiopia are evolving rapidly. Here's what restaurant and food business owners need to know about packaging compliance.</p>
+    <h4>EFDA Requirements</h4><p>All food-contact packaging must be certified by the Ethiopian Food and Drug Authority. Look for the EFDA mark on packaging products.</p>
+    <h4>Migration Testing</h4><p>Packaging materials must not transfer harmful chemicals to food. Always request migration test certificates from your supplier.</p>
+    <h4>Temperature Ratings</h4><p>Hot food containers must be rated for the temperature of the food they hold. Our foil containers are rated up to 220°C.</p>
+    <h4>Labeling Requirements</h4><p>Custom-branded packaging must include material type, manufacturer info, and food-safe symbols. Meazas handles all compliance labeling for custom orders.</p>`
+  },
+  {
+    title: 'Meazas P.L.C. Opens New Branch in Dire Dawa',
+    cat: 'Company News', date: 'Apr 10, 2026', read: '2 min read',
+    img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80',
+    content: `<p>We are thrilled to announce the grand opening of our sixth branch, located in the Sabian area of Dire Dawa.</p>
+    <h4>What the New Branch Offers</h4><p>The Dire Dawa branch carries our full range of packaging, chemicals, and industrial products. Vehicle inquiries and financing consultations are also available on-site.</p>
+    <h4>Grand Opening Offer</h4><p>To celebrate the opening, we're offering 15% off all products purchased at the Dire Dawa branch throughout May 2026. No minimum order required.</p>
+    <h4>Visit Us</h4><p>Sabian Area, Dire Dawa. Open Mon–Sat, 8AM–6PM. Call +251 914 789 012 for directions or to pre-order stock.</p>
+    <p>Thank you to all our customers in eastern Ethiopia for your continued support. We look forward to serving you better than ever.</p>`
+  },
+  {
+    title: 'Top 10 Industrial Supplies Every Factory in Ethiopia Needs in 2026',
+    cat: 'Industrial', date: 'Apr 2, 2026', read: '5 min read',
+    img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
+    content: `<p>Based on a survey of 200+ factory managers across Ethiopia, here are the top 10 industrial supplies that keep operations running smoothly.</p>
+    <ol style="padding-left:20px;line-height:2">
+      <li><strong>Heavy-duty degreasers</strong> — for machinery and equipment cleaning</li>
+      <li><strong>Industrial hand wash liquid</strong> — bulk 20L containers for high-traffic washrooms</li>
+      <li><strong>Floor disinfectant concentrate</strong> — dilutable for large floor areas</li>
+      <li><strong>Safety gloves (nitrile)</strong> — chemical-resistant, disposable</li>
+      <li><strong>Foil containers</strong> — for canteen and food service operations</li>
+      <li><strong>Paper cups</strong> — for water stations and break rooms</li>
+      <li><strong>Surface disinfectant spray</strong> — for workstations and shared equipment</li>
+      <li><strong>Waste bin liners (heavy duty)</strong> — industrial grade, 120L</li>
+      <li><strong>Chlorine bleach solution</strong> — for sanitation and surface sterilization</li>
+      <li><strong>Antibacterial soap dispensers</strong> — wall-mounted, 1L refillable</li>
+    </ol>
+    <p>All 10 are available at Meazas P.L.C. with bulk pricing. <a href="#contact" style="color:var(--primary)">Request a quote today.</a></p>`
+  }
+];
+
+function openBlogPost(index) {
+  const post = blogPosts[index];
+  document.getElementById('blogModalContent').innerHTML = `
+    <img src="${post.img}" alt="${post.title}" style="width:100%;height:260px;object-fit:cover;border-radius:10px;margin-bottom:20px" />
+    <span class="blog-cat" style="margin-bottom:12px;display:inline-block">${post.cat}</span>
+    <h2 style="font-size:22px;font-weight:800;margin-bottom:10px;line-height:1.35">${post.title}</h2>
+    <div style="font-size:12px;color:#6b7280;display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap">
+      <span><i class="fas fa-calendar"></i> ${post.date}</span>
+      <span><i class="fas fa-clock"></i> ${post.read}</span>
+      <span><i class="fas fa-user"></i> Meazas Team</span>
+    </div>
+    <div style="font-size:14.5px;line-height:1.85;color:#374151">${post.content}</div>`;
+  document.getElementById('blogModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeBlogModal() {
+  document.getElementById('blogModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('blogModal').addEventListener('click', e => {
+  if (e.target === document.getElementById('blogModal')) closeBlogModal();
+});
+
+// ===== FAQ ACCORDION =====
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ===== LIVE CHAT =====
+const chatReplies = {
+  'i want to place a bulk order': "Great! For bulk orders, please share the product name, quantity, and your location. Our sales team will send you a custom quote within 2 hours.",
+  'track my order': "To track your order, please share your order number or the phone number used when placing the order. We'll check the status right away.",
+  'product inquiry': "Sure! Which product are you interested in? You can also browse our full catalog above. We're happy to answer any questions.",
+  'vehicle financing': "We offer 12–60 month financing through our banking partners. A 20–30% down payment is required. Would you like to schedule a consultation at your nearest branch?",
+  'default': "Thanks for your message! Our support team will respond shortly. For urgent matters, call us at +251 911 234 567 or WhatsApp us."
+};
+
+function openLiveChat() {
+  document.getElementById('liveChatWidget').classList.add('open');
+  document.getElementById('chatInput').focus();
+}
+function closeLiveChat() {
+  document.getElementById('liveChatWidget').classList.remove('open');
+}
+function sendQuickReply(text) {
+  addChatMsg(text, 'user');
+  document.querySelector('.chat-quick-replies')?.remove();
+  setTimeout(() => {
+    const key = text.toLowerCase();
+    const reply = chatReplies[key] || chatReplies['default'];
+    addChatMsg(reply, 'agent');
+  }, 800);
+}
+function sendChatMsg() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  addChatMsg(text, 'user');
+  document.querySelector('.chat-quick-replies')?.remove();
+  setTimeout(() => {
+    const key = text.toLowerCase();
+    let reply = chatReplies['default'];
+    for (const k of Object.keys(chatReplies)) {
+      if (text.toLowerCase().includes(k)) { reply = chatReplies[k]; break; }
+    }
+    addChatMsg(reply, 'agent');
+  }, 900);
+}
+function addChatMsg(text, type) {
+  const msgs = document.getElementById('chatMessages');
+  const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const div = document.createElement('div');
+  div.className = `chat-msg ${type}`;
+  div.innerHTML = `<p>${text}</p><span>${time}</span>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
